@@ -725,7 +725,6 @@ MonoBehaviour:
   health: 50
   damage: 15
   speed: 1
-  goldDrops: 50
   waitTime: 3
   canAttack: 1
   isAttacking: 0
@@ -733,6 +732,7 @@ MonoBehaviour:
   curWall: {fileID: 0}
   rb: {fileID: 1852700924791577465}
   inPosition: 0
+  goldDrops: 50
   behaviour: 2
 --- !u!65 &683660281
 BoxCollider:
