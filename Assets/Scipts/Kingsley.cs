@@ -7,8 +7,8 @@ public class Kingsley : Enemy
     protected override void Start()
     {
         base.Start();
-        health = 75000;
+        health = 50000;
         damage = 7500;
-        speed = 8;
+        speed = 6;
     }
 }

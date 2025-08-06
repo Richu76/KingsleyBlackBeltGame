@@ -8,9 +8,9 @@ public class Goblin : Enemy
     {
         base.Start();
         if(GameManager.Instance.wave >= 50){
-            health = 2000;
-            damage = 500;
-            speed = 10;
+            health = 1000;
+            damage = 200;
+            speed = 9;
             goldDrops = 15;
         } else {
         health = 200;
