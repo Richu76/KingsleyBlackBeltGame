@@ -7,6 +7,8 @@ public class Troops : HumanoidAI
     // Update is called once per frame
     public static Troops Instance;
 
+    //public Collider col = .GetComponent<BoxCollider>();
+
     public void Awake(){
         Instance = this;
     }
@@ -56,7 +58,7 @@ public class Troops : HumanoidAI
                             isAttacking = false;
                             curTarget = t;
                         }
-                        else if (Vector3.Distance(t.gameObject.transform.position, transform.position) < Vector3.Distance(curTarget.transform.position, transform.position))
+                        if (Vector3.Distance(t.gameObject.transform.position, transform.position) < Vector3.Distance(curTarget.transform.position, transform.position))
                         {
                             curTarget = t;
                         }
@@ -82,10 +84,11 @@ public class Troops : HumanoidAI
         //Debug.Log("Collided");
         if (c.gameObject.CompareTag("Enemy") && canAttack)
         {
-            //Debug.Log("Collidied");
+            //Debug.Log("Collidied and attacking");
             curTarget = c.gameObject;
             DoDamage();
             isAttacking = true;
+            //col.isTrigger = false;
         }
 
         if(c.gameObject.CompareTag("Border")){

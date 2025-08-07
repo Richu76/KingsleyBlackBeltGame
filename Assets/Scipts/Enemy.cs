@@ -46,6 +46,7 @@ public class Enemy : HumanoidAI
 
     public void OnTriggerEnter(Collider c)
     {
+        //Debug.Log("Enemy Collided");
         if (c.gameObject.CompareTag("Wallas") && canAttack)
         {
             curWall = c.gameObject.GetComponentInChildren<Target>();
@@ -53,6 +54,7 @@ public class Enemy : HumanoidAI
         }
         if (c.gameObject.CompareTag("Troop") && canAttack)
         {
+            //Debug.Log("Enemy Collided and Attacking");
             curTarget = c.gameObject;
             isAttacking = true;
         }

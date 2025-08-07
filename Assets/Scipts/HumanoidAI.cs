@@ -97,6 +97,7 @@ public class HumanoidAI : MonoBehaviour
     public IEnumerator WaitOnAttack()
     {
         yield return new WaitForSeconds(waitTime);
+        //Troops.Instance.col.isTrigger = true;
         canAttack = true;
     }
 
