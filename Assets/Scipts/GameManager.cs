@@ -103,6 +103,16 @@ public class GameManager : MonoBehaviour
 
     public Text TroopModeText;
 
+    public GameObject tutorialArrow1;
+    public GameObject gridArrow;
+    public GameObject goldArrow;
+    public GameObject TroopCArrow;  
+    public GameObject TroopArrow;
+    public GameObject HeroArrow;
+    public GameObject UpgradesArrow;
+    public GameObject ResearchArrow;
+    public GameObject SliderArrow;
+    public GameObject WavesArrow;
     //public bool DragnirActive;
     //public bool GameEnd = false;
     //public int dmgMulti = 1;
@@ -224,35 +234,55 @@ public class GameManager : MonoBehaviour
        } else if(TTS == 2){
         TutorialText.text = "If you look at the middle of your screen, you will see a castle, defend that at all costs";
        } else if (TTS == 3) {
+        tutorialArrow1.SetActive(true);
         TutorialText.text = "The Houses on the top left, when clicked on and built, will give you money over time. The gold one is the one that gives the most money, and while the blue house provides money, the blue house provides less";
        } else if(TTS == 4){
-        TutorialText.text = "If you clicked on one of the houses, a grid with white squares should show up within the castle. Move your mouse over to the grid after clicking on the house and simply click on one of the grids to place it down";
+        tutorialArrow1.SetActive(false);
+        gridArrow.SetActive(true);
+        TutorialText.text = "If you clicked on one of the houses, a grid with white squares should show up within the castle. Move your mouse over to the grid after clicking on the house and simply click on one of the grids to place it down (The hitbox of the house is on the top left, and you can press Q to stop placing the house)";
        } else if (TTS == 5) {
-        TutorialText.text = "These houses will provide gold, you can see how much you have on the top right of your screen. You need gold for practically everything in this game, be careful because you can go into debt, and once you do, there is a 2 second money restriction placed on you.";
+        gridArrow.SetActive(false);
+        goldArrow.SetActive(true);
+        TutorialText.text = "These houses will provide gold, you can see how much you have on the top right of your screen. You need gold for practically everything in this game, Right now, there is no gold generation as the tutorial is active";
        } else if(TTS == 6){
-        TutorialText.text = "You can see the amount of troops you can place down on the bottom of your screen. The blue house provides 5 more troop spaces per house placed";
+        goldArrow.SetActive(false);
+        TroopCArrow.SetActive(true);
+        TutorialText.text = "You can see the amount of troops you can place down on the bottom of your screen. The blue house provides 5 more troop spaces per house placed and gives you gold, albeit less than the gold house";
        } else if (TTS == 7) {
-        TutorialText.text = "The troops are on the bottom right of the screen, press that button and a list of troops and buttons will show up. Each of the troops have a cooldown, so make sure you use them strategically";
+        TroopCArrow.SetActive(false);
+        TroopArrow.SetActive(true);
+        TutorialText.text = "The troops are on the bottom right of the screen, press that button and a list of troops and buttons will show up with the cost and details of it. Each of the troops have a cooldown, so make sure you use them strategically";
        } else if(TTS == 8){
+        TroopArrow.SetActive(false);
+        HeroArrow.SetActive(true);
         TutorialText.text = "By the way, the Hero troop is a revenge like troop. It can only be spawned after a troop on the field has died. This hero is also the only troop that can be upgraded, the hero upgrades will only affect the heros that are currently placed on the field. ";
        } else if (TTS == 9) {
-        TutorialText.text = "Once you press on the Button of a troop, if you click with your Mouse, the troop will be placed where your mouse is currently at. You can stop putting down the troops with the Q key, and all the troops can be placed until you've reached your max amount.";
+        HeroArrow.SetActive(false);
+        TutorialText.text = "Right now, due to the tutorial being on, spawning is disabled. However, once the game starts and you press on the Button of a troop, if you then click with your Mouse anwhere on the screen, the troop will be placed where your mouse is currently at. You can stop putting down the troops with the Q key, and all the troops can be placed until you've reached your max amount.";
        } else if(TTS == 10){
-        TutorialText.text = "on the bottom left corner of your screen, you will see the upgrades menu. If you press the Anvil, you can upgrade your heroes damage, health, speed and even base health. You can also unlock new Troops with research upgrades and reduce cooldown times";
+        UpgradesArrow.SetActive(true);
+        TutorialText.text = "on the bottom left corner of your screen, you will see the upgrades menu. If you press the Home button then the Anvil one, you can upgrade your heroes damage, health, speed and even base health. You can also unlock new Troops with research upgrades and reduce cooldown times";
        } else if (TTS == 11) {
+        UpgradesArrow.SetActive(false);
+        ResearchArrow.SetActive(true);
         TutorialText.text = "In that menu, every research cooldown upgrade decreases the cooldown of your troops by roughly 25%, adding up to a total of 50% across all troops, excluding the Hero.";
        } else if(TTS == 12){
-        TutorialText.text = "Now, if you look above the upgrades menu, you will see a slider bar. This here will help you progress faster as it will speed up the game, this can go as slow as 1x speed and as fast as 10x the speed of the game. You can also press 'Escape' to pause the game and mute the music, or return back to the start screen.";
+        ResearchArrow.SetActive(false);
+        SliderArrow.SetActive(true);
+        TutorialText.text = "Now, if you look above the upgrades button, or left of the menu, you will see a slider bar. This here will help you progress faster as it will speed up the game, this can go as slow as 1x speed and as fast as 10x the speed of the game. You can also press 'Escape' to pause the game and mute the music, or return back to the start screen.";
        } else if (TTS == 13) {
+        SliderArrow.SetActive(false);
         TutorialText.text = "After this tutorial has ended, the enemies will spawn soon, make sure to defend them. Enemies appear in waves, each one increasing in difficulty. These enemies will drop some gold to aid in your kingdom.";
        } else if(TTS == 14){
         TutorialText.text = "One thing to know about enemies is that some only target one specific type of your defense, like the walls or your troops, but most target both. Beware, because after 10 waves as there will be a strong boss.";
        } else if(TTS == 15){ 
         TutorialText.text = "In the later waves, there will be mini bosses every 5 waves, and a boss every 10. make sure to be geared up because enemies will get very difficult after a certain wave.";
        } else if(TTS == 16){
-        TutorialText.text = "The goal is to defend for 100 waves of enemies, and succesfully defend your base from the dark forces, go ahead and have fun trying to win against them.";
+        WavesArrow.SetActive(true);
+        TutorialText.text = "The goal is to defend for 100 waves of enemies, you can see which wave you are at on the top of your screen. Make sure to succesfully defend your base from the dark forces, go ahead and have fun trying to win against them.";
        } else if (TTS == 17) {
-        TutorialText.text = "This marks the end of this tutorial, so make sure to defend your empire with all you got, okay? Watch out because as soon as you click off of this, the enemies will start spawning. Good luck! (I suggest using the slider to stop the game first if you're still confused)";
+        WavesArrow.SetActive(false);
+        TutorialText.text = "This marks the end of this tutorial, so make sure to defend your empire with all you got, okay? Watch out because as soon as you click off of this, the enemies will start spawning. Good luck! (I suggest you place down houses first so you can build up gold).";
        } else if (TTS == 18) {
             StartCoroutine(GoldTimer());
             //AudioManager.Instan.musicSource.clip = BackgroundMusic;
