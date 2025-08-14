@@ -230,20 +230,20 @@ public class GameManager : MonoBehaviour
     public void ChangeCurText()
     {
        if(TTS == 1){
-        TutorialText.text = "This game is a wave defense game, the goal is to defend your castle from being conquered by the dark forces, My name is Haon and i am here to help you learn how to play this game";
+        TutorialText.text = "This game is a wave defense game, the goal is to defend your castle from being conquered by the dark forces, My name is Haon and I am here to help you learn how to play this game";
        } else if(TTS == 2){
-        TutorialText.text = "If you look at the middle of your screen, you will see a castle, defend that at all costs";
+        TutorialText.text = "If you look at the middle of your screen, you will see a castle, defend that at all costs. You have four walls, and each one of them have seperate health bars and act as lives. A wall can die and you will lose a life, but only once all four walls are dead, you will lose.";
        } else if (TTS == 3) {
         tutorialArrow1.SetActive(true);
-        TutorialText.text = "The Houses on the top left, when clicked on and built, will give you money over time. The gold one is the one that gives the most money, and while the blue house provides money, the blue house provides less";
+        TutorialText.text = "The Houses will give you money over time if you click on them and build it. The gold one gives the most money, and while the blue house gives less, the blue house helps out with different things other than just gold";
        } else if(TTS == 4){
         tutorialArrow1.SetActive(false);
         gridArrow.SetActive(true);
-        TutorialText.text = "If you clicked on one of the houses, a grid with white squares should show up within the castle. Move your mouse over to the grid after clicking on the house and simply click on one of the grids to place it down (The hitbox of the house is on the top left, and you can press Q to stop placing the house)";
+        TutorialText.text = "A grid with white squares should show up within the castle if you clicked on one. Move your mouse over to the grid after clicking on the house and simply click on one of the grids (The hitbox of the house is on the top left, and you can press Q to stop placing the house)";
        } else if (TTS == 5) {
         gridArrow.SetActive(false);
         goldArrow.SetActive(true);
-        TutorialText.text = "These houses will provide gold, you can see how much you have on the top right of your screen. You need gold for practically everything in this game, Right now, there is no gold generation as the tutorial is active";
+        TutorialText.text = "You can see how much gold you have on the top right of your screen, they are made over time with the houses. You need gold for practically everything in this game, Right now, there is no gold generation as the tutorial is active";
        } else if(TTS == 6){
         goldArrow.SetActive(false);
         TroopCArrow.SetActive(true);
@@ -255,13 +255,13 @@ public class GameManager : MonoBehaviour
        } else if(TTS == 8){
         TroopArrow.SetActive(false);
         HeroArrow.SetActive(true);
-        TutorialText.text = "By the way, the Hero troop is a revenge like troop. It can only be spawned after a troop on the field has died. This hero is also the only troop that can be upgraded, the hero upgrades will only affect the heros that are currently placed on the field. ";
+        TutorialText.text = "The Hero troop is a revenge like troop. It can only be spawned after a troop on the field has died. This hero is also the only troop that can be upgraded, the hero upgrades will only affect the heros that are currently placed on the field. ";
        } else if (TTS == 9) {
         HeroArrow.SetActive(false);
-        TutorialText.text = "Right now, due to the tutorial being on, spawning is disabled. However, once the game starts and you press on the Button of a troop, if you then click with your Mouse anwhere on the screen, the troop will be placed where your mouse is currently at. You can stop putting down the troops with the Q key, and all the troops can be placed until you've reached your max amount.";
+        TutorialText.text = "Right now, due to the tutorial being on, spawning is disabled. However, once the game starts and you press on the Button of a troop, you can click again and the troop will be placed where your mouse is. You can stop putting down the troops with the Q key, and all the troops only take up 1 space";
        } else if(TTS == 10){
         UpgradesArrow.SetActive(true);
-        TutorialText.text = "on the bottom left corner of your screen, you will see the upgrades menu. If you press the Home button then the Anvil one, you can upgrade your heroes damage, health, speed and even base health. You can also unlock new Troops with research upgrades and reduce cooldown times";
+        TutorialText.text = "on the bottom left corner of your screen, you will see the upgrades menu. If you press the Home button, a menu where you can upgrade your heroes damage, health, speed and even base health will show up. You can also unlock new Troops, and reduce cooldown times on them";
        } else if (TTS == 11) {
         UpgradesArrow.SetActive(false);
         ResearchArrow.SetActive(true);
@@ -269,14 +269,14 @@ public class GameManager : MonoBehaviour
        } else if(TTS == 12){
         ResearchArrow.SetActive(false);
         SliderArrow.SetActive(true);
-        TutorialText.text = "Now, if you look above the upgrades button, or left of the menu, you will see a slider bar. This here will help you progress faster as it will speed up the game, this can go as slow as 1x speed and as fast as 10x the speed of the game. You can also press 'Escape' to pause the game and mute the music, or return back to the start screen.";
+        TutorialText.text = "Now, if you look above the upgrades button, or left of the menu, you will see a slider bar. This here will help you progress faster as it will speed up the game. ";
        } else if (TTS == 13) {
-        SliderArrow.SetActive(false);
-        TutorialText.text = "After this tutorial has ended, the enemies will spawn soon, make sure to defend them. Enemies appear in waves, each one increasing in difficulty. These enemies will drop some gold to aid in your kingdom.";
+        TutorialText.text = "this can go as slow as 1x speed and as fast as 10x the speed of the game. You can also press 'Escape' to pause the game and mute the music, or return back to the start screen. ";
        } else if(TTS == 14){
-        TutorialText.text = "One thing to know about enemies is that some only target one specific type of your defense, like the walls or your troops, but most target both. Beware, because after 10 waves as there will be a strong boss.";
+        SliderArrow.SetActive(false);
+        TutorialText.text = "One thing to know about enemies is that some only target one specific type of your defense, like the walls or your troops, but most target both. These enemies will also drop some gold to aid in your kingdom.";
        } else if(TTS == 15){ 
-        TutorialText.text = "In the later waves, there will be mini bosses every 5 waves, and a boss every 10. make sure to be geared up because enemies will get very difficult after a certain wave.";
+        TutorialText.text = "Every 10 waves, a strong boss will spawn, and in the later waves, there will be mini bosses every 5 waves, alongside a boss every 10. Make sure to be geared up because enemies will get very difficult after a certain wave.";
        } else if(TTS == 16){
         WavesArrow.SetActive(true);
         TutorialText.text = "The goal is to defend for 100 waves of enemies, you can see which wave you are at on the top of your screen. Make sure to succesfully defend your base from the dark forces, go ahead and have fun trying to win against them.";
@@ -291,6 +291,16 @@ public class GameManager : MonoBehaviour
             TutText.SetActive(false);
             NextButton.SetActive(false);
             SkipButton.SetActive(false);
+            tutorialArrow1.SetActive(false);
+            gridArrow.SetActive(false);
+            goldArrow.SetActive(false);
+            TroopCArrow.SetActive(false);
+            TroopArrow.SetActive(false);
+            HeroArrow.SetActive(false);
+            UpgradesArrow.SetActive(false);
+            ResearchArrow.SetActive(false);
+            SliderArrow.SetActive(false);
+            WavesArrow.SetActive(false);
             TutorialText.text = " ";
        }
        TTS++;
@@ -305,6 +315,16 @@ public class GameManager : MonoBehaviour
         NextButton.SetActive(false);
         SkipButton.SetActive(false);
         TutorialText.text = " ";
+        tutorialArrow1.SetActive(false);
+        gridArrow.SetActive(false);
+        goldArrow.SetActive(false);
+        TroopCArrow.SetActive(false);
+        TroopArrow.SetActive(false);
+        HeroArrow.SetActive(false);
+        UpgradesArrow.SetActive(false);
+        ResearchArrow.SetActive(false);
+        SliderArrow.SetActive(false);
+        WavesArrow.SetActive(false);
         TTS = 99;
     }
 

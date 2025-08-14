@@ -11052,7 +11052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf35ed152f977b40b2ef4a335f2c5df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 500
+  gold: 750
   GoldText: {fileID: 534061536}
   WaveText: {fileID: 930033820}
   TroopsText: {fileID: 99694721}
