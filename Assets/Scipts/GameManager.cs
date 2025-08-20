@@ -116,6 +116,7 @@ public class GameManager : MonoBehaviour
     //public bool DragnirActive;
     //public bool GameEnd = false;
     //public int dmgMulti = 1;
+    public Animation SwingAnimation;    
 
     // Start is called before the first frame update
     void Awake()
