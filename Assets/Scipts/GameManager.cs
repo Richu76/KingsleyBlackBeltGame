@@ -115,8 +115,7 @@ public class GameManager : MonoBehaviour
     public GameObject WavesArrow;
     //public bool DragnirActive;
     //public bool GameEnd = false;
-    //public int dmgMulti = 1;
-    public Animation SwingAnimation;    
+    //public int dmgMulti = 1; 
 
     // Start is called before the first frame update
     void Awake()

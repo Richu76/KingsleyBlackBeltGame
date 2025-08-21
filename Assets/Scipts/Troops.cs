@@ -86,7 +86,6 @@ public class Troops : HumanoidAI
         {
             //Debug.Log("Collidied and attacking");
             curTarget = c.gameObject;
-            GameManager.Instance.SwingAnimation.Play();
             DoDamage();
             isAttacking = true;
             //col.isTrigger = false;
